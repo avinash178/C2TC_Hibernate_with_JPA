@@ -43,7 +43,7 @@ public class StudentServiceImpl implements StudentService{
 	
 	public Student searchByHallTicket(long hallTicketNo) {
 		//no need of transaction, as it's an read operation 
-				Student student = dao.getByHallTicket(hallTicketNo);
+				Student student= dao.getByHallTicket(hallTicketNo);
 				return student;
 			}
 	
