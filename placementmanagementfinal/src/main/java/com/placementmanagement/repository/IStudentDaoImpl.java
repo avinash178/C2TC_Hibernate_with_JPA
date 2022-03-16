@@ -5,10 +5,12 @@ import javax.persistence.EntityManager;
 import com.placementmanagement.entities.*;
 
 public class IStudentDaoImpl implements IStudentDao {
+	//
+	
 	private EntityManager entityManager;
 
 	public IStudentDaoImpl() {
-		entityManager = JPAUtil.getEntityManager();
+		entityManager = JPAUtil.getEntityManager();       // constructor to create entityManger()
 	}
 
 	

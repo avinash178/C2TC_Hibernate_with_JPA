@@ -9,7 +9,7 @@ public class ICollegeRepositoryImpl implements ICollegeRepository {
 
 	private EntityManager entityManager;
 
-	public ICollegeRepositoryImpl() {
+	public ICollegeRepositoryImpl() {                    // constructor to create entityManger()
 		entityManager = JPAUtil.getEntityManager();
 	}
 

@@ -17,13 +17,15 @@ public class Student {
 	private String course;
 	private int year;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL)        // cascade all 
 	@JoinColumn(name="Certificate_Id")
 	private Certificate certificate;
 	
 	
 	private long hallTicketNo;
 
+	
+	// getter and setter of fields
 	public long getId() {
 		return id;
 	}

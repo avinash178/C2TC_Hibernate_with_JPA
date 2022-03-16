@@ -7,35 +7,44 @@ import com.placementmanagement.repository.IStudentDaoImpl;
 
 public class ICertificateServiceImpl implements ICertificateService
 {
-	private ICertificateRepository cer;
+	// reference variable 
+	private ICertificateRepository dao;
 
 	public ICertificateServiceImpl() {
-		cer = new ICertificateRepositoryImpl();
+		
+		dao = new ICertificateRepositoryImpl();    // object of ICertififcateRepositoryImpl
 	}
 
 	public void updateCertificate(Certificate certificate) {
-		cer.beginTransaction();
-		cer.updateCertificate(certificate);
-		cer.commitTransaction();
+		// calling methods of ICertificateRepositoryImpl
+		dao.beginTransaction();
+		dao.updateCertificate(certificate);
+		dao.commitTransaction();
 		
 	}
 
 	public void addCertificate(Certificate certificate) {
-		cer.beginTransaction();
-		cer.addCertificate(certificate);
-		cer.commitTransaction();
+		// calling methods of ICertificateRepositoryImpl
+
+		dao.beginTransaction();
+		dao.addCertificate(certificate);
+		dao.commitTransaction();
 		
 	}
 
 	public void removeCertificate(Certificate certificate) {
-		cer.beginTransaction();
-		cer.removeCertificate(certificate);
-		cer.commitTransaction();
+		// calling methods of ICertificateRepositoryImpl
+
+		dao.beginTransaction();
+		dao.removeCertificate(certificate);
+		dao.commitTransaction();
 		
 	}
 
 	public Certificate searchCertificateId(long id) {
-		Certificate certificate = cer.getCertificateById(id);
+		// calling methods of ICertificateRepositoryImpl
+
+		Certificate certificate = dao.getCertificateById(id);
 		return certificate;
 	}
 	

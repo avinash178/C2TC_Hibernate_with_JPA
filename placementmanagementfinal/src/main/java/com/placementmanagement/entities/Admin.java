@@ -8,17 +8,20 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 
-@Entity
+@Entity                            // Created admin table in database
 public class Admin {
 	
-	@Id
+	@Id								// primary key 
 	private long id;
 	
 	private String name;
 	private char[] password;		// using character array for password
 	
-	@OneToOne
-	private User user;
+	@OneToOne						// admin and user one to one relation 
+	private User user;	
+	
+	
+	//  created getter and setter of field
 	
 	
 	public long getId() {

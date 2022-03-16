@@ -8,36 +8,37 @@ import com.placementmanagement.repository.ICollegeRepositoryImpl;
 
 public class ICollegeServiceImpl implements ICollegeService {
 
-	private ICollegeRepository col;
+	private ICollegeRepository dao;				// reference variable
 
 	public ICollegeServiceImpl() {
-		col = new ICollegeRepositoryImpl();
+		dao = new ICollegeRepositoryImpl();			// object of ICollegeRepositoryImpl
 	}
 
 	
 	public void addCollege(College college) {
-		col.beginTransaction();
-		col.addCollege(college);
-		col.commitTransaction();
+		// calling method of ICollegeRepositoryImpl class
+		dao.beginTransaction();
+		dao.addCollege(college);
+		dao.commitTransaction();
 		
 	}
 
 	public void updateCollege(College college) {
-		col.beginTransaction();
-		col.updateCollege(college);
-		col.commitTransaction();
+		dao.beginTransaction();
+		dao.updateCollege(college);
+		dao.commitTransaction();
 		
 	}
 
 	public College  searchCollege(long id) {
-		College college = col.searchCollege(id);
+		College college = dao.searchCollege(id);
 		return college;
 	}
 
 	public void deleteCollege(College college) {
-		col.beginTransaction();
-		col.deleteCollege(college);
-		col.commitTransaction();
+		dao.beginTransaction();
+		dao.deleteCollege(college);
+		dao.commitTransaction();
 	}
 
 	public boolean schedulePlacement(Placement placement) {

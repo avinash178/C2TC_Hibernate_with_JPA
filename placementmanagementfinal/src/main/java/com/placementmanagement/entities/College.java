@@ -10,10 +10,11 @@ public class College {
 	private long id;
 	@OneToOne
 	@JoinColumn(name="User_id")
-	private User collegeAdmin; //   
+	private User collegeAdmin;       // reference variable  
 	private String collegeName;
 	private String location;
 	
+	// getter and setter of field
 
 	public User getCollegeAdmin() {
 		return collegeAdmin;

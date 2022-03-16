@@ -9,7 +9,7 @@ public class IPlacementRepositoryImpl implements IPlacementRepository {
 	
 	private EntityManager entityManager;
 
-	public IPlacementRepositoryImpl() {
+	public IPlacementRepositoryImpl() {             // constructor to create entityManger()
 		entityManager = JPAUtil.getEntityManager();
 	}
 	

@@ -11,7 +11,7 @@ public class IUserRepositoryImpl implements IUserRepository {
 	
 	private EntityManager entityManager;
 
-	public IUserRepositoryImpl() {
+	public IUserRepositoryImpl() {                      // constructor to create entityManger()
 		entityManager = JPAUtil.getEntityManager();
 	}
 

@@ -5,20 +5,24 @@ import javax.persistence.*;
 import com.placementmanagement.entities.*;
 
 
-@Entity
+@Entity                              
 public class Certificate {
 
 	@Id
 	private long id;
 	private int year;
 	
-	@OneToOne
-	@JoinColumn(name="student_Id")
+	@OneToOne                      // mapping between Student and Certificate
+	@JoinColumn(name="student_Id")     // set column name as student_Id
 	private Student student;
 	
-	@ManyToOne
+	@ManyToOne						// college can many certificate in it 
 	@JoinColumn(name="college_Id")
 	private College college;
+	
+	
+	// created getter and setter of field
+	
 	public long getId() {
 		return id;
 	}

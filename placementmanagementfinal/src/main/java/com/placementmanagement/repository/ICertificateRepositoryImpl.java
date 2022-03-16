@@ -9,7 +9,7 @@ public class ICertificateRepositoryImpl implements ICertificateRepository {
 
 	private EntityManager entityManager;
 
-	public ICertificateRepositoryImpl() {
+	public ICertificateRepositoryImpl() {                     // constructor to create entityManger()
 		entityManager = JPAUtil.getEntityManager();
 	}
 

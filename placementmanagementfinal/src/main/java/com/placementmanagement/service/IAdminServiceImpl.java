@@ -6,32 +6,37 @@ import com.placementmanagement.repository.IAdminRepositoryImpl;
 
 public class IAdminServiceImpl implements IAdminService
 {
-	private IAdminRepository  ad;
+	// reference variable of IAdminRepository 
+	private IAdminRepository  dao;
 
-	public IAdminServiceImpl() {
-		ad = new IAdminRepositoryImpl();
-	}
+	public IAdminServiceImpl()
+	{ 
+		dao = new IAdminRepositoryImpl();// creating object of IAdminRepositoryImpl
+	} 
 	
 	
 
 	public void addAdmin(Admin admin) {
-		ad.beginTransaction();
-		ad.addAdmin(admin);
-		ad.commitTransaction();
+		// calling  methods of IAdminRepositoryImpl  class
+		dao.beginTransaction();
+		dao.addAdmin(admin);
+		dao.commitTransaction();
 		
 	}
 
 	public void updateAdmin(Admin admin) {
-		ad.beginTransaction();
-		ad.updateAdmin(admin);
-		ad.commitTransaction();
+		// calling  methods of IAdminRepositoryImpl  class
+		dao.beginTransaction();
+		dao.updateAdmin(admin);
+		dao.commitTransaction();
 		
 	}
 
 	public void removeAdmin(Admin admin) {
-		ad.beginTransaction();
-		ad.removeAdmin(admin);
-		ad.commitTransaction();
+		// calling  methods of IAdminRepositoryImpl  class
+		dao.beginTransaction();
+		dao.removeAdmin(admin);
+		dao.commitTransaction();
 		
 	}
 	

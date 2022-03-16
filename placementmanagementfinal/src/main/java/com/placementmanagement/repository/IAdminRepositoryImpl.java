@@ -8,7 +8,7 @@ public class IAdminRepositoryImpl implements IAdminRepository {
 
 	private EntityManager entityManager;
 
-	public IAdminRepositoryImpl() {
+	public IAdminRepositoryImpl() {                           // constructor to create entityManger()
 		entityManager = JPAUtil.getEntityManager();
 	}
 

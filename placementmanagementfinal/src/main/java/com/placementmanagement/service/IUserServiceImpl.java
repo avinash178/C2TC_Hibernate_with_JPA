@@ -8,28 +8,29 @@ import com.placementmanagement.repository.IUserRepositoryImpl;
 public class IUserServiceImpl implements IUserService{
 
 	
-	private IUserRepository  use;
+	private IUserRepository  dao;			// reference variable
 
 	public IUserServiceImpl() {
-		use = new IUserRepositoryImpl();
+		dao = new IUserRepositoryImpl();		// creating object of IUserRepositoryImpl
 	}
 
 	
 	
 	public void addUser(User user) {
-		use.beginTransaction();
-		use.addUser(user);
-		use.commitTransaction();
+		// calling method of IUserRepositoryImpl
+		dao.beginTransaction();
+		dao.addUser(user);
+		dao.commitTransaction();
 		
 	}
 
 	public void updateUser(User user) {
-		use.beginTransaction();
-		use.updateUser(user);
-		use.commitTransaction();
+		// calling method of IUserRepositoryImpl
+		dao.beginTransaction();
+		dao.updateUser(user);
+		dao.commitTransaction();
 		
 	}
-
 	public User login(User user) {
 		// TODO Auto-generated method stub
 		return null;
@@ -43,16 +44,17 @@ public class IUserServiceImpl implements IUserService{
 
 
 	public void removeUser(User user) {
-		use.beginTransaction();
-		use.removeUser(user);
-		use.commitTransaction();
+		// calling method of IUserRepositoryImpl
+		dao.beginTransaction();
+		dao.removeUser(user);
+		dao.commitTransaction();
 		
 		
 	}
 
 
 	public User searchUserById(long id) {
-		User user = use.getUserById(id);
+		User user = dao.getUserById(id);
 		return user;
 	}
 	
