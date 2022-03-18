@@ -12,7 +12,7 @@ public class AccountUser{
 		IService service= new IServiceImpl();      // created object of IServiceImpl class
 		Bank bank=new Bank();
 		
-		
+	
 		
 		//setting bank details
 		bank.setIfsc(6450);
@@ -33,6 +33,7 @@ public class AccountUser{
 		bank=service.searchBankByIFSC(6459);// first searching bank and giving object of that to bank reference
 		bank.addMoney(1000);    // adding money through bankclass method
 		service.addmoney(bank); // updating bank balance of bank 
+		
 		
 		
 		bank=service.searchBankByIFSC(6459); // first searching bank and giving object of that to bank reference  

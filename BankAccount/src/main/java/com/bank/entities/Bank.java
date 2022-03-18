@@ -12,9 +12,10 @@ public class Bank {
 	private long accountNumber;
 	private double balance;
 	
-	private char[] password;
+	private char[] password;              // password in char[] for security reason 
 	
 
+	// getter and setter
 	
 	public long getIfsc() {
 		return ifsc;
@@ -53,7 +54,14 @@ public class Bank {
 	}
 
 	public void withdrawMoney(double money) {
+		
+		// if withdrawal amount is less than balance it will return insufficient balance
+		if(balance>=money) {
 		this.balance = this.balance - money;
+		}
+		else {
+			System.out.println("insufficient balance");
+		}
 	}
 
 	public char[] getPassword() {
