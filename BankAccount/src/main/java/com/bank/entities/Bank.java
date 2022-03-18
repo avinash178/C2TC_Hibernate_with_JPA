@@ -11,7 +11,11 @@ public class Bank {
 	private String bankName;
 	private long accountNumber;
 	private double balance;
+	
+	private char[] password;
+	
 
+	
 	public long getIfsc() {
 		return ifsc;
 	}
@@ -51,5 +55,14 @@ public class Bank {
 	public void withdrawMoney(double money) {
 		this.balance = this.balance - money;
 	}
+
+	public char[] getPassword() {
+		return password;
+	}
+
+	public void setPassword(char[] password) {
+		this.password = password;
+	}
+	
 
 }
